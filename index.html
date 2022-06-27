@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="class.js"></script>
+    <title>fisher</title>
+</head>
+<body>
+    <form action="store.php" method="post">
+        <input type="text" id="name" name="name">
+        <input type="password" id="password" name="password">
+        <input type="submit" value="click me...">
+    </form>
+    <button onclick=classy()>class maker
+    <button onclick=add()>wood +1
+    <script>
+        const p2 = new user('test', 'ticle');
+        var json_user = $.parseJSON(p2);
+        $.post('store.php',{'obj':json_user});
+        function classy() {
+            const player = new user(document.getElementById('name').value, document.getElementById('password').value);
+            console.log(player)
+        }
+        function add(){
+            p2.resources[1] = p2.resources[1] + 1;
+        }
+    </script>
+</body>
+</html>
